@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfADefiniteIntegralFormulaUsingTheMethodOfExhaustion}
+\pmcreated{2013-03-22 14:56:35}
+\pmmodified{2013-03-22 14:56:35}
+\pmowner{ruffa}{7723}
+\pmmodifier{ruffa}{7723}
+\pmtitle{derivation of a definite integral formula using the method of exhaustion}
+\pmrecord{22}{36634}
+\pmprivacy{1}
+\pmauthor{ruffa}{7723}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{78A45}
+\pmclassification{msc}{30B99}
+\pmclassification{msc}{26B15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+    The area under an arbitrary function $f(x)$ that is piecewise continuous on $[a,b]$ can be "exhausted" with triangles.  The first triangle has vertices at $(a,0)$ and $(b,0)$, and intersects $f(x)$ at 
+\[
+x = a + \frac{b - a}{2},
+\]
+ yielding the estimate
+	\[
+A_1  = \frac{1}{2}(b - a)f(a + \frac{b - a}{2})
+\]
+
+
+    The second approximation involves two triangles, each sharing two vertices with the original triangle, and intersecting $f(x)$ at \[
+x = a + \frac{b - a}{4}
+\]
+and \[
+x = a + \frac{3(b - a)}{4},
+\]
+ adding the area:
+
+	\[
+A_2  = \frac{1}{4}(b - a)\{ f(a + \frac{b - a}{4}) - f(a + \frac{b - a}{2}) + f(a + \frac{3(b - a)}{4})\}
+\]
+
+    A third such approximation involves four more triangles, adding the area
+	\[
+\begin{array}{c}
+ A_3 {\rm{ }} = \frac{{{\rm{ }}1}}{8}(b - a)\{ f(a + \frac{b - a}{8}) - f(a + \frac{b - a}{4}) \\ 
+  + f(a + \frac{3(b - a)}{8}) - f(a + \frac{b - a}{2}) + f(a + \frac{5(b - a)}{8}) \\ 
+  - f(a + \frac{3(b - a)}{4}) + f(a + \frac{7(b - a)}{8})\} . \\ 
+ \end{array}
+\]
+
+This procedure eventually leads to the formula
+\[
+\int\limits_a^b {f(x)dx = \sum\limits_{n = 1}^\infty  {A_n }  = \left( {b - a} \right)} \sum\limits_{n = 1}^\infty  {\sum\limits_{m = 1}^{2^n  - 1} {\left( { - 1} \right)^{m + 1} } } 2^{ - n} f\left( {a + m(b - a)/2^n } \right)
+\]
+
+
+{\bf References}
+
+\begin{enumerate}
+\item
+\PMlinkexternal{http://arxiv.org/abs/math.CA/0011078}{http://arxiv.org/abs/math.CA/0011078}.
+\item Int. J. Math. Math. Sci. 31, 345-351, 2002.
+
+
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

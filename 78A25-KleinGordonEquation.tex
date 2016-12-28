@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KleinGordonEquation}
+\pmcreated{2013-03-22 17:55:11}
+\pmmodified{2013-03-22 17:55:11}
+\pmowner{invisiblerhino}{19637}
+\pmmodifier{invisiblerhino}{19637}
+\pmtitle{Klein-Gordon equation}
+\pmrecord{12}{40412}
+\pmprivacy{1}
+\pmauthor{invisiblerhino}{19637}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{78A25}
+\pmclassification{msc}{35Q60}
+\pmsynonym{Klein Gordon equation}{KleinGordonEquation}
+\pmsynonym{Klein-Gordon-Fock equation}{KleinGordonEquation}
+\pmrelated{DiracEquation}
+\pmrelated{SchrodingersWaveEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The Klein-Gordon equation is an equation of mathematical physics that describes spin-0 particles. It is given by:
+\[
+\Box \psi = \left(\frac{mc}{\hbar }\right)^2 \psi
+\]
+Here the $\Box$ symbol refers to the wave operator, or D'Alembertian, ($\Box = \nabla^2 - \frac{1}{c^2} \partial^2_t$)
+ and $\psi$ is the wave function of a particle.
+It is a Lorentz invariant expression.
+\subsection{Derivation}
+Like the Dirac equation, the Klein-Gordon equation is derived from the relativistic expression for total energy:
+\[
+E^2 = m^2c^4 + p^2c^2
+\]
+Instead of taking the square root (as Dirac did), we keep the equation in squared form and replace the momentum and energy with their operator equivalents, $E = i \hbar \partial_t$, $p = -i \hbar \nabla$. This gives (in disembodied operator form)
+\[
+-\hbar^2 \frac{\partial^2}{\partial t^2} = m^2 c^4 - \hbar^2 c^2 \nabla^2
+\]
+Rearranging:
+\[
+\hbar^2\left(c^2 \nabla^2 -\frac{\partial^2}{\partial t^2} \right)  = m^2 c^4
+\]
+Dividing both sides by $\hbar^2 c^2$:
+\[
+\left( \nabla^2 - \frac{1}{c^2}\frac{\partial^2}{\partial t^2} \right) =  \frac{m^2 c^2}{\hbar^2}
+\]
+Identifying the expression in brackets as the D'Alembertian and right-multiplying the whole expression by $\psi$ , we obtain the Klein-Gordon equation:
+\[
+\Box \psi = \left(\frac{mc}{\hbar }\right)^2 \psi
+\]
+
+%%%%%
+%%%%%
+\end{document}
